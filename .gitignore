@@ -1,0 +1,9 @@
+Makefile
+blib
+pm_to_blib
+*.bak
+.*.swp
+*~
+CPAN-Changes-Diff-*
+tst
+.build
