@@ -38,7 +38,7 @@ sub _find_files {
       next if $lfile->is_dir;
       my $base = $lfile->basename;
       next
-        unless -f $lfile and $base =~ /^ (?: changes | changelog )(?: \.txt | \.pod )? $/ix;
+        unless -f $lfile and $base =~ /^ (?: changes | changelog | news )(?: \.txt | \.pod )? $/ix;
       my $rfile = $right->file($base);
       return ($lfile, $rfile) if -f $rfile;
     }

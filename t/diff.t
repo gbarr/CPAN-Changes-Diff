@@ -51,5 +51,15 @@ check('t/data/Moose-0.98','t/data/Moose-0.99',<<EOS);
 EOS
 
 
+check('t/data/Gtk2-1.222','t/data/Gtk2-1.223',<<EOS);
+Overview of changes in Gtk2 1.223
+=================================
+
+* Cope with the rename of the keysym defines in gtk+ 2.22
+* Correct the memory management in Gtk2::Gdk::Window->new
+* Fix a test failure in GtkBuilder.t
+EOS
+
+
 done_testing();
 
