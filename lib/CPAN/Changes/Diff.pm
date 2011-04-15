@@ -89,7 +89,12 @@ sub changes {
     } @$diffs;
 
   my $sign = $chunks[0]{changes} > 0 ? '+' : '-';
-  return join "", map { $_->[2] } grep { $_->[0] eq $sign } @{$chunks[0]{diff}};
+  my $text = join "", map { $_->[2] } grep { $_->[0] eq $sign } @{$chunks[0]{diff}};
+
+  $text =~ s/\A\s*\n//;
+  $text =~ s/^\s*\z//m;
+
+  return $text;
 }
 
 1;

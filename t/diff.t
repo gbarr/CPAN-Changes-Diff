@@ -30,5 +30,26 @@ check('t/data/DBI-1.612','t/data/DBI-1.613',<<EOS);
  Changes in DBI 1.612 (svn r14254) 16th July 2010
 EOS
 
+
+check('t/data/Moose-0.98','t/data/Moose-0.99',<<EOS);
+0.99 Mon, Mar 8, 2010
+
+  [NEW FEATURES]
+
+  * New method find_type_for in Moose::Meta::TypeConstraint::Union, for finding
+    which member of the union a given value validates for. (Cory Watson)
+
+  [BUG FIXES]
+
+  * DEMOLISH methods in mutable subclasses of immutable classes are now called
+    properly (Chia-liang Kao, Jesse Luehrs)
+
+  [NEW DOCUMENTATION]
+
+  * Added Moose::Manual::Support that defines the support, compatiblity, and
+    release policies for Moose. (Chris Prather)
+EOS
+
+
 done_testing();
 
